@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './RecipeForm.css';
 
 function RecipeForm({ ingredient, setIngredient, fetchRecipe }) {
+  const [submitted, setSubmitted] = useState(false)
   const handleChange = (e) => {
     setIngredient(e.target.value);
+    if (submitted){
+      setSubmitted(false)
+    }
+    
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    fetchRecipe();
+    setSubmitted(true)
+    await fetchRecipe();
+    setIngredient('')
+    setSubmitted(false)
+    
   };
 
   return (
@@ -17,7 +26,7 @@ function RecipeForm({ ingredient, setIngredient, fetchRecipe }) {
       <input
         className="inputForm"
         type="text"
-        placeholder="Mood ingredient..."
+        placeholder={submitted ? '' : "Mood ingredient..."}
         value={ingredient}
         onChange={handleChange}
       />

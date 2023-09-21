@@ -8,7 +8,7 @@ export default function RecipeDisplay({recipes}) {
             
             <ul>
                 {recipes.map((recipe) => (
-                    <li key={recipe.idMeal} className="recipeList">
+                    <li key={recipe.idMeal}>
                         <h3 className="recipeName">{recipe.strMeal}</h3>
                         <img className="foodImage"src={recipe.strMealThumb} alt={recipe.strMeal} />
                     </li>

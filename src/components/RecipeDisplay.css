@@ -18,12 +18,21 @@ h2{
     width: 230px;
     margin-left: 300px;
     border-radius: 30px;
+    /* border: antiquewhite; */
     border: #d08504;
-    border-style: solid;
+    border-style:inset;
 }
 
 .recipeName{
     margin: 50px 50% 10px 50px;
     /* color: beige; */
     color: #d08504;
+    font-weight:100 ;
+    
+}
+li{
+    list-style: None;
+    padding: 5px 10px;
+    
+    
 }
