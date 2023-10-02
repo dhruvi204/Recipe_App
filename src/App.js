@@ -20,6 +20,10 @@ export default function App() {
 
       const data = await response.json();
       setRecipes(data.meals || []); // Update the recipes state with the fetched data or an empty array if data.meals is undefined
+      // adding new stuff
+      // storing the id
+    
+      
     } catch (error) {
       console.error('Error fetching recipes:', error);
       // Handle the error here, such as displaying an error message to the user

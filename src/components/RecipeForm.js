@@ -10,6 +10,7 @@ function RecipeForm({ ingredient, setIngredient, fetchRecipe }) {
     }
     
   };
+ 
 
   const handleSubmit = async(e) => {
     e.preventDefault();
