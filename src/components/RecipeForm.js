@@ -30,7 +30,7 @@ function RecipeForm({ ingredient, setIngredient, fetchRecipe }) {
         value={ingredient}
         onChange={handleChange}
       />
-      <button className="inputButton"type="submit">Get Recipe</button>
+      <button className="GoButton"type="submit">Go !</button>
     </form>
     </div>
     
@@ -38,35 +38,3 @@ function RecipeForm({ ingredient, setIngredient, fetchRecipe }) {
 }
 
 export default RecipeForm;
-
-
-
-
-
-
-
-// import React from "react";
-
-// export default function RecipeForm({ ingridient, setIngridient, fetchRecipe }) {
-//   const handleKeyDown = event => {
-//     if (event.key === "Enter") {
-//       event.preventDefault();
-//       fetchRecipe();
-//     }
-//   };
-
-//   return (
-//     <div className="UserInput">
-//       <input
-//         type="text"
-//         id="ingridient"
-//         name="ingridient"
-//         placeholder="Mood Ingridient..."
-//         value={ingridient}
-//         onChange={event => setIngridient(event.target.value)}
-//         onKeyDown={handleKeyDown}
-//       />
-//       <button onClick={fetchRecipe}>Search</button>
-//     </div>
-//   );
-// }

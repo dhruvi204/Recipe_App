@@ -33,8 +33,9 @@ export default function App() {
         ingredient={ingredient}
         setIngredient={setIngredient}
         fetchRecipe={fetchRecipe}
+        recipes={recipes}
       />
-      {recipes.length > 0 && <RecipeDisplay recipes={recipes} />}
+      {recipes.length > 0 && <RecipeDisplay recipes={recipes}/>}
     </div>
   );
 }
